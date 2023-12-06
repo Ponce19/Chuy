@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111; /* Fondo negro mate */
+    margin: 0;
+    padding: 0;
+    color: #000; /* Color de texto blanco para contrastar con el fondo */
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco para las cartas */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 55, 255, 0.7); /* Efecto de iluminación rosa neón */
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    color: #ff0000; /* Texto rosa neón */
+    cursor: pointer;
+}
+
+/* Estilos para los modales */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi transparente */
+    z-index: 1;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #f70000;
+}
+
+/* Estilos minimalistas para el botón "Más información" */
+button {
+    background-color: transparent; /* Fondo transparente */
+    color: #007bff; /* Color del texto */
+    border: 1px solid #007bff; /* Borde delgadamente visible */
+    padding: 8px 16px; /* Espaciado interno (ajusta según tus preferencias) */
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transición suave en varios atributos */
+}
+
+button:hover {
+    background-color: #007bff; /* Cambio de color de fondo al pasar el mouse */
+    color: #fff; /* Cambio de color del texto al pasar el mouse */
+    border-color: #007bff; /* Cambio de color del borde al pasar el mouse */
+}
+header {
+    height: 100px;
+    background: #0c1c79;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed; /* Mantiene el encabezado fijo en la parte superior */
+    z-index: 100; /* Asegura que esté por encima del contenido */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave debajo del encabezado */
+    transition: background-color 0.3s, opacity 0.3s; /* Agrega una transición de color de fondo y opacidad */
+    opacity: 1; /* Establece la opacidad inicial en 1 (completamente visible) */
+    left: 0; /* Alinea el encabezado a la izquierda */
+    width: 100%;
+}

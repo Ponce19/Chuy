@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Venta.css">
+    <title>Tipos de Latte</title>
+</head>
+<header>
+    <a href="Index.html"><button>Inicio</button></a>
+</header>
+<body>
+    <h1>Tipos de Latte</h1>
+    <div class="coffee-section">
+        <div class="coffee-card">
+            <img src="346199_10_PM4(12).jpg" alt="Latte Clásico" width="280" height="180">
+            <h3>pluma plus</h3>
+            <p>clasica pluma solo que transaprante</p>
+            <p>Precio: $15.99</p>
+            <button onclick="personalizarLatte('pluma plus')">Personalizar</button>
+        </div>
+        <div class="coffee-card">
+            <img src="images (13).jpg" alt="Latte Vainilla" width="280" height="180">
+            <h3>boligrafo para niños</h3>
+            <p>dura de romper</p>
+            <p>Precio: $50.29</p>
+            <button onclick="personalizarLatte('Latte de Vainilla')">Personalizar</button>
+        </div>
+    </div>
+
+    <div id="personalizar-latte" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('personalizar-latte')">&times;</span>
+            <h3>Personaliza tu boligrafo</h3>
+            <h4 id="latte-nombre">Latte Clásico</h4>
+            <label for="tipo-leche">tipo de tinta</label>
+            <select id="tipo-leche">
+                <option value="leche-entera">negro</option>
+                <option value="leche-descremada">azul</option>
+                <option value="leche-de-almendras">roja</option>
+            </select>
+            <label for="tipo-azucar">tipo de punta </label>
+            <select id="tipo-azucar">
+                <option value="azucar-blanco">grande</option>
+                <option value="azucar-moreno">fina</option>
+                <option value="sin-azucar">normal</option>
+            </select>
+            <label for="temperatura">Selecciona el tipo de color</label>
+            <input type="radio" id="fuerte" name="temperatura" value="fuerte">
+            <label for="fuerte">Fuerte</label>
+            <input type="radio" id="caliente" name="temperatura" value="claro">
+            <label for="claro">Claro</label>
+            <button onclick="agregarAlCarrito()">Agregar al carrito</button>
+        </div>
+    </div>
+    <script src="Venta.js"></script>
+</body>
+</html>

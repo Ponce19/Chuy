@@ -1,0 +1,190 @@
+/* Establece reglas iniciales para todos los elementos en la página */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para el encabezado */
+.fade-header {
+    height: 100px;
+    background: #5b76bb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed; /* Mantiene el encabezado fijo en la parte superior */
+    z-index: 100; /* Asegura que esté por encima del contenido */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave debajo del encabezado */
+    transition: background-color 0.3s, opacity 0.3s; /* Agrega una transición de color de fondo y opacidad */
+    opacity: 1; /* Establece la opacidad inicial en 1 (completamente visible) */
+    left: 0; /* Alinea el encabezado a la izquierda */
+    width: 100%;
+}
+
+/* Cambia el fondo y la opacidad al hacer scroll hacia abajo */
+.scrolled {
+    background-color: rgba(51, 51, 51, 0.7); /* Cambia el color de fondo con opacidad */
+    opacity: 0.9; /* Reduce la opacidad al hacer scroll */
+}
+
+
+/* Estilos para el logotipo en el encabezado */
+.logo {
+    text-transform: uppercase;
+    color: black;
+    font-weight: 200;
+    font-size: 24px;
+}
+
+/* Estilos para los enlaces en el menú de navegación */
+.menu a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+/* Estilos para los íconos de menú en dispositivos móviles */
+.mostrar-menu,
+.esconder-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+/* Estilos específicos para el ícono de "mostrar menú" */
+.mostrar-menu {
+    order: 2;
+}
+
+/* Cambia el color de los enlaces y los íconos de menú al pasar el mouse sobre ellos */
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover {
+    color: #0d6031;
+}
+
+/* Estilos para el cuadro de verificación (checkbox) */
+#check {
+    display: none;
+}
+
+/* Estilos para la sección de introducción */
+#intro {
+    padding: 20px 50px;
+    background-image: url("/media/banner.jpeg");
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Pseudo-elemento para crear un fondo semitransparente en la sección de introducción */
+#intro::before {
+    content: '';
+    
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+
+/* Estilos para el contenido en la sección de introducción */
+.contenido-intro{
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Reduce el tamaño de fuente en la sección de introducción para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu a,
+    .contenido-intro h3 {
+        font-size: 20px;
+        font-weight: 400;
+        padding: 10px 0;
+    }
+}
+
+/* Estilos para la sección de menú */
+#menu {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Agrega esta línea para permitir que los elementos se coloquen en una fila adicional en dispositivos móviles */
+}
+
+#menu div {
+    text-align: center;
+    padding: 30px 30px;
+    box-shadow: 0 8px 12px rgba(0, 26, 255, 0.7);
+    border-radius: 10px;
+    width: 280px;
+    margin: 0 20px;
+}
+
+#menu div h4 {
+    color: rgb(0, 255, 47);
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+#menu div p {
+    color: #666;
+    font-size: 18px;
+}
+
+.boton-saber-mas {
+    background-color: rgb(0, 255, 106);
+    text-decoration: none;
+    color: #13125f;
+    padding: 10px 30px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: all 0.4s;
+}
+
+/* Añade un margen inferior al botón "Saber más" para separarlo del texto */
+.boton-saber-mas {
+    margin-bottom: 30px;
+}
+
+.boton-saber-mas:hover {
+    background-color: #b91010;
+    color: #000;
+}
+
+/* Estilos para la sección "Acerca de" */
+#about {
+    padding: 50px;
+    text-align: center;
+}
+
+#about img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+#about h3 {
+    color: #bb5d5b;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+#about p {
+    color: #333;
+    font-size: 18px;
+}
+
+img{
+    border-radius: 10%;
+}

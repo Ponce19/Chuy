@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Venta.css">
+    <title>Tipos de lapiceros</title>
+</head>
+<header>
+    <a href="Index.html"><button>Inicio</button></a>
+</header>
+<body>
+    <h1>boligrafos baratos</h1>
+    <div class="coffee-section">
+        <div class="coffee-card">
+            <img src="images (9).jpg" alt="Latte Clásico" width="280" height="180">
+            <h3>Clasico</h3>
+            <p>pluma fina</p>
+            <p>Precio: $16.99</p>
+            <button onclick="personalizarLatte('Latte Clásico')">Personalizar</button>
+        </div>
+        <div class="coffee-card">
+            <img src="images (10).jpg" alt="Latte Vainilla" width="280" height="180">
+            <h3>pluma clasica</h3>
+            <p>color unico</p>
+            <p>Precio: $4.29</p>
+            <button onclick="personalizarLatte('Latte de Vainilla')">Personalizar</button>
+        </div>
+        <div class="coffee-card">
+            <img src="descarga (11).jpg" alt="Latte Vainilla" width="280" height="180">
+            <h3>pluma nuerva generacion </h3>
+            <p>unica pluma en su clase</p>
+            <p>Precio: $6.29</p>
+            <button onclick="personalizarLatte('Latte de Vainilla')">Personalizar</button>
+        </div>
+    </div>
+
+    <div id="personalizar-lapicero " class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('personaliza tu lapicero')">&times;</span>
+            <h3>Personaliza tu lapicero</h3>
+            <h4 id="latte-nombre">diseño</h4>
+            <label for="tipo-tinta">Selecciona el tipo de boligrafo:</label>
+            <select id="tipo-tamaño">
+                <option value="tipo de punta">punta</option>
+                <option value="tipos de suavidad">tipo-suavidad</option>
+                <option value="leche-de-almendras">tipo-grueso</option>
+            </select>
+            <label for="tipo-azucar">Selecciona el tipo de color:</label>
+            <select id="tipo-azucar">
+                <option value="azucar-blanco">negro</option>
+                <option value="azucar-moreno">rojo</option>
+                <option value="sin-azucar">azul</option>
+            </select>
+            <label for="temperatura">Selecciona la tinta:</label>
+            <input type="radio" id="fuerte" name="temperatura" value="fuerte">
+            <label for="fuerte">Fuerte</label>
+            <input type="radio" id="claro" name="temperatura" value="claro">
+            <label for="claro">Caliente</label>
+            <button onclick="agregarAlCarrito()">Agregar al carrito</button>
+        </div>
+    </div>
+    <script src="Venta.js"></script>
+</body>
+</html>

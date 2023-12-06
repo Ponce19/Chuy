@@ -1,0 +1,104 @@
+/* Estilos para el div de coffee-card con efecto de blur */
+.coffee-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que ocupe el 100% de la altura de la ventana */
+    background-image: url(/media/DreamShaper_v7_A_latte_1.jpg);
+}
+
+.coffee-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    background: rgba(255, 255, 255, .3);
+ -webkit-backdrop-filter: blur(5px);
+ backdrop-filter: blur(5px);
+ border: 1.5px solid rgba(209, 213, 219, 0.3);
+ border-radius: 5%;
+}
+
+h1 {
+    text-align: center; /* Centra el texto en el h1 */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el modal de personalización */
+/* Estilos para el modal de personalización */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente */
+}
+
+.modal-content {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #888;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 50%; /* Modifica el ancho según tus preferencias */
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente */
+}
+
+.close {
+    color: #555;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body{
+    background: #5bbbad;
+}
+/* Estilos generales para pantallas de cualquier tamaño */
+
+/* Estilos para tamaños de pantalla más pequeños (por ejemplo, pantallas de menos de 768px de ancho) */
+@media (max-width: 768px) {
+    .coffee-section {
+        flex-direction: row; /* Cambia la dirección de los elementos a columna */
+    }
+
+    .coffee-card {
+        width: 40%; /* Reduce el ancho del coffee-card */
+    }
+
+    .modal-content {
+        width: 60%; /* Reduce el ancho del modal */
+    }
+    img{
+        width: 80%;
+    }
+}
+

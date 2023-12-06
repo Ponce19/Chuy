@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Option.css">
+    <title>Menú de lapiceros</title>
+</head>
+<header>
+    <nav class="menu">
+        <h1>Seleccione tu lapicero a tu gusto</h1>
+        <a href="index.html">Inicio</a>
+    </nav>
+</header>
+<body>
+    <div class="menu-container">
+        <div class="card">
+            <a href="#" target="_blank">
+                <img src="descarga1.jpg" alt="Café 1" width="280" height="180">
+            </a>
+            <h3>lapicero Premium</h3>
+            <p>es de las mejor calidad que tenemos</p>
+            <button onclick="openModal('modal1')">Detalles</button>
+        </div>
+
+        <div class="card">
+            <a href="#" target="_blank">
+                <img src="images2.jpg" alt="Café 2" width="280" height="180">
+            </a>
+            <h3>lapicero moderno</h3>
+            <p>es un lapicero moderno con los componentes mas clasicos</p>
+            <button onclick="openModal('modal2')">Detalles</button>
+        </div>
+
+        <div class="card">
+            <a href="#" target="_blank">
+                <img src="descarga (3).jpg" alt="Café 3" width="280" height="180">
+            </a>
+            <h3>lapicero Especial</h3>
+            <p>lapicero con modificaciones diferentes a los que has vistos</p>
+            <button onclick="openModal('modal3')">Detalles</button>
+        </div>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <img src="descarga4.jpg" alt="Café Premium">
+                <h3>lapicero Premium</h3>
+                <p>es de las mejor calidad que tenemos</p>
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <img src="descarga (5).jpg" alt="Café Orgánico">
+                <h3>lapicero Clasico</h3>
+                <p>es un lapicero moderno con los componentes mas clasicos </p>
+            </div>
+        </div>
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <img src="images6.jpg" alt="Café Especial">
+                <h3>Café Especial</h3>
+                <p>Nuestro Café Especial es un viaje sensorial. Con notas únicas y un sabor excepcional, este café es para aquellos que buscan una experiencia verdaderamente especial. ¡Déjate llevar por su magia!</p>
+            </div>
+        </div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>
